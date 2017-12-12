@@ -1,0 +1,27 @@
+pip install django==1.11
+pip install model_mommy=1.4.0
+pip install djangorestframework
+
+
+aniso8601==1.3.0
+click==6.7
+Django==1.11
+djangorestframework==3.7.3
+Flask==0.12.2
+Flask-Login==0.4.1
+Flask-RESTful==0.3.6
+Flask-Restless==0.17.0
+Flask-SQLAlchemy==2.3.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+mimerender==0.6.0
+model-mommy==1.4.0
+olefile==0.44
+Pillow==4.3.0
+python-dateutil==2.6.1
+python-mimeparse==1.6.0
+pytz==2017.3
+six==1.11.0
+SQLAlchemy==1.1.15
+Werkzeug==0.13

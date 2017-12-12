@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="main">
+        <div class="form-group">
+            <ol class="breadcrumb">
+                
+                <li><a href="{% url 'schedules:index' %}">Agenda</a></li>
+                / <a href="">Deletar Agendamento ({{ schedule.name }} - {{ schedule.date_schedule }} das {{ schedule.date_schedule_start }} às {{ schedule.date_schedule_end }})</a>
+                
+            </ol>
+        </div>
+        <div class="form-group" align="center">
+            <form class="form-signin" method="post">
+                {% csrf_token %}
+                <h4>Você deseja realmente deletar esse agendamento?</h4>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-small btn-danger">Confirmar</button>
+                    <a href="{% url 'schedules:index' %}" class="btn btn-small btn-default">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

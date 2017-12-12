@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="main">
+        <div class="form-group">
+            <ol class="breadcrumb">
+                {% block breadcrumb %}
+                <li><a href="{% url 'schedules:index' %}">Agenda</a></li>
+                / <a href="">{{ schedule.name }} - {{ schedule.date_schedule }} das {{ schedule.date_schedule_start }} às {{ schedule.date_schedule_end }}</a>
+                {% endblock %}
+            </ol>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="form-signin-heading">Nome</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="form-signin-heading">{{ schedule.name }}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="form-signin-heading">Data do Agendamento</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="form-signin-heading">{{ schedule.date_schedule }} entre {{ schedule.date_schedule_start }} e {{ schedule.date_schedule_end }}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="form-signin-heading">Procedimento</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="form-signin-heading">{{ schedule.procedure|linebreaks }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
